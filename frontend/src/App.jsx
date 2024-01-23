@@ -1,11 +1,11 @@
-import {Routes,Route,Navigate,Outlet} from 'react-router-dom'
+import {Routes,Route,Navigate} from 'react-router-dom'
 import Login from './components/Login'
 import Home from './container/Home'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth } from '../firebaseconfig'
 import { useEffect,useState } from 'react'
 function App() {
-  const [user, error] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged(() => {

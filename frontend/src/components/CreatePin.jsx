@@ -6,6 +6,9 @@ import { client } from '../client'
 import Spinner from './Spinner'
 import {categories} from '../utils/data'
 
+import React from 'react'
+
+
 
 const CreatePin = ({ user }) => {
   const refresh = () => window.location.reload(true);
